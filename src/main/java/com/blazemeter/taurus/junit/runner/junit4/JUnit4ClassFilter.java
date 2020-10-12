@@ -32,7 +32,7 @@ public class JUnit4ClassFilter implements Filter {
     }
 
     protected boolean isExcludedClass(Class c) {
-        return "junit.framework.TestSuite$1".equals(c.getName());
+        return "junit.framework.TestSuite$1".equals(c.getName()) || "com.thoughtworks.selenium.SeleneseTestCase".equals(c.getName());
     }
 
     protected boolean isTestClass(Class c) {

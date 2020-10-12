@@ -27,5 +27,6 @@ public class JUnit4ClassFilterTest extends TestCase {
     public void testExclude() throws ClassNotFoundException {
         JUnit4ClassFilter filter = new JUnit4ClassFilter();
         assertTrue(filter.isExcludedClass(Class.forName("junit.framework.TestSuite$1")));
+        assertTrue(filter.isExcludedClass(Class.forName("com.thoughtworks.selenium.SeleneseTestCase")));
     }
 }
